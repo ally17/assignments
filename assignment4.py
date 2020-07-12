@@ -1,11 +1,11 @@
 while True:
     number = int(input("Enter a number: "))
-    prime_list = []
-    for i in range(2, number - 1):
-       prime = number % i
-       prime_list.append(prime)
-    if 0 in prime_list:
-        print(f"output : {number} is not a prime number")
+    count = 0
+    for i in range(1, number + 1):
+        if number % i == 0:
+            count += 1
+    if (number==0) or (number==1) or (count >= 3):
+        print(f"{number} is not an Armstrong number")
     else:
-        print(f"output : {number} is a prime number")
-        break 
+        print(f"{number} is an Armstrong number")
+        break
